@@ -3,7 +3,7 @@ Ext.namespace('eCredit');
 Ext.Loader.setConfig({
     enabled	:	true,
     paths	:	{
-        eCredit	    : "js/app",
+        eCredit	    : "static/js/app"
         //"Ext.ux"  	: "static/core/Ext.ux",
         //"source"    : "static/core/lib"
         //      "Validation" : "app/lib"
@@ -16,7 +16,7 @@ eCredit.application = null;
 Ext.application({
     name: 'eCredit',
     requires: ['Ext.container.Viewport'],
-    appFolder: 'app',
+    appFolder: 'static/js/app',
     controllers: [
         'Persons'
         ,'eCredit.controller.main.ControllerTreeMain'

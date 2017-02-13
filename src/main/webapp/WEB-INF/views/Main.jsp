@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>eCredit</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/js/core/extjs/resources/css/ext-all.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/js/core/extjs/resources/css/ext-all.css">
 
     <style type="text/css">
       html, body {
@@ -12,76 +12,76 @@
         height: 100%;
       }
       .icon-logout{
-        background-image:url(${pageContext.request.contextPath}/js/core/images/logout.png) !important;
+        background-image:url(${pageContext.request.contextPath}/static/js/core/images/logout.png) !important;
       }
       .icon-save {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/save.ico) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/save.ico) !important;
       }
       .icon-search {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/search.ico) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/search.ico) !important;
       }
       .icon-Log-Out-icon {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/Log-Out-icon.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/Log-Out-icon.png) !important;
       }
       .icon-new-user {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/new-user.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/new-user.png) !important;
       }
       .icon-modify {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/modify.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/modify.png) !important;
       }
       .icon-application {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/application.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/application.png) !important;
       }
       .icon-pending {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/pending.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/pending.png) !important;
       }
       .icon-process {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/process.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/process.png) !important;
       }
       .icon-pie {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/pie.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/pie.png) !important;
       }
       .icon-pdf {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/pdf.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/pdf.png) !important;
       }
       .icon-excel {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/excel.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/excel.png) !important;
       }
       .icon-new {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/new.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/new.png) !important;
       }
       .icon-users {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/users.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/users.png) !important;
       }
       .icon-delete {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/delete.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/delete.png) !important;
       }
       .icon-add {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/add.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/add.png) !important;
       }
       .icon-assign {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/assign.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/assign.png) !important;
       }
       .icon-finish {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/finish.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/finish.png) !important;
       }
       .icon-advance {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/advance.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/advance.png) !important;
       }
       .icon-attachFile {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/attachFile.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/attachFile.png) !important;
       }
       .icon-detail {
-        background-image: url(${pageContext.request.contextPath}/js/core/images/detail.png) !important;
+        background-image: url(${pageContext.request.contextPath}/static/js/core/images/detail.png) !important;
       }
     </style>
 
   </head>
 
   <body>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/js/core/extjs/ext-debug.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/js/core/extjs/locale/ext-lang-es.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/js/app/view/util/Messages.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/js/app.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/core/extjs/ext-debug.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/core/extjs/locale/ext-lang-es.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/app/view/util/Messages.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/app.js"></script>
   </body>
 </html>
