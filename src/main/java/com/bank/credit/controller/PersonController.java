@@ -3,6 +3,8 @@ package com.bank.credit.controller;
 import com.bank.credit.model.GeneralResponse;
 import com.bank.credit.model.bean.PersonaBean;
 import com.bank.credit.service.PersonaService;
+import com.bank.credit.util.Constantes;
+import com.bank.credit.util.Pagination;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,16 +29,23 @@ public class PersonController extends AbstractController {
         Gson gson = new Gson();
         GeneralResponse generalResponse = new GeneralResponse();
         String jsonData;
+        Pagination pagination = new Pagination();
         try {
+            pagination.setDirectionSort("ASC");
+            pagination.setFieldNameSort("numero_dni");
+            pagination.setStart(0L);
+            pagination.setLimit(5L);
 
-            List<PersonaBean> list = personaService.listPersonActive(false);
-            long count = list.size();
+            long totalCount = personaService.listadoPersonasPaginadoTotalCount();
+            List<PersonaBean> data = personaService.listadoPersonasPaginado(pagination);
+
             generalResponse.setSuccess(true);
-            generalResponse.setMessage("");
-            generalResponse.setTotalCount(count);
-            generalResponse.setData(list);
+            generalResponse.setMessage(Constantes.OPERATION_SUCCESS);
+            generalResponse.setTotalCount(totalCount);
+            generalResponse.setData(data);
 
         } catch (Exception e){
+            e.getStackTrace();
             generalResponse.setSuccess(false);
             generalResponse.setMessage(e.getMessage());
             generalResponse.setTotalCount(0L);
@@ -54,16 +63,23 @@ public class PersonController extends AbstractController {
         Gson gson = new Gson();
         GeneralResponse generalResponse = new GeneralResponse();
         String jsonData;
+        Pagination pagination = new Pagination();
         try {
+            pagination.setDirectionSort("ASC");
+            pagination.setFieldNameSort("numero_dni");
+            pagination.setStart(0L);
+            pagination.setLimit(5L);
 
-            List<PersonaBean> list = personaService.listPersonActive(true);
-            long count = list.size();
+            long totalCount = personaService.listadoPersonasPaginadoTotalCount();
+            List<PersonaBean> data = personaService.listadoPersonasPaginado(pagination);
+
             generalResponse.setSuccess(true);
-            generalResponse.setMessage("");
-            generalResponse.setTotalCount(count);
-            generalResponse.setData(list);
+            generalResponse.setMessage(Constantes.OPERATION_SUCCESS);
+            generalResponse.setTotalCount(totalCount);
+            generalResponse.setData(data);
 
         } catch (Exception e){
+            e.getStackTrace();
             generalResponse.setSuccess(false);
             generalResponse.setMessage(e.getMessage());
             generalResponse.setTotalCount(0L);
@@ -83,7 +99,7 @@ public class PersonController extends AbstractController {
         String jsonData;
         try {
 
-            List<PersonaBean> list = personaService.listPersonActive(true);
+            List<PersonaBean> list = null;//personaService.listPersonActive(true);
             long count = list.size();
             generalResponse.setSuccess(true);
             generalResponse.setMessage("");
@@ -110,7 +126,7 @@ public class PersonController extends AbstractController {
         String jsonData;
         try {
 
-            List<PersonaBean> list = personaService.listPersonActive(true);
+            List<PersonaBean> list = null;//personaService.listPersonActive(true);
             long count = list.size();
             generalResponse.setSuccess(true);
             generalResponse.setMessage("");
@@ -138,7 +154,7 @@ public class PersonController extends AbstractController {
         String jsonData;
         try {
 
-            List<PersonaBean> list = personaService.listPersonActive(true);
+            List<PersonaBean> list = null;//personaService.listPersonActive(true);
             long count = list.size();
             generalResponse.setSuccess(true);
             generalResponse.setMessage("");
@@ -165,7 +181,7 @@ public class PersonController extends AbstractController {
         String jsonData;
         try {
 
-            List<PersonaBean> list = personaService.listPersonActive(true);
+            List<PersonaBean> list = null;//personaService.listPersonActive(true);
             long count = list.size();
             generalResponse.setSuccess(true);
             generalResponse.setMessage("");

@@ -10,32 +10,22 @@ public class PersonaPK  implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	@Column(name="id_empresa")
-	private String idEmpresa;
-	@Column(name="dni")
-	private String dni;
-	
+	@Column(name="numero_dni")
+	private String numeroDni;
+
 	public PersonaPK(){
 		
 	}
 
-	public String getIdEmpresa() {
-		return idEmpresa;
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
 	}
 
-	public void setIdEmpresa(String idEmpresa) {
-		this.idEmpresa = idEmpresa;
+	public String getNumeroDni() {
+		return numeroDni;
 	}
 
-	public String getDni() {
-		return dni;
+	public void setNumeroDni(String numeroDni) {
+		this.numeroDni = numeroDni;
 	}
-
-	public void setDni(String dni) {
-		this.dni = dni;
-	}
-	
-	
-	
-	
 }

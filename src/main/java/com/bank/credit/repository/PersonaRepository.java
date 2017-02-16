@@ -7,10 +7,14 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.bank.credit.model.jpa.Persona;
 import com.bank.credit.model.jpa.PersonaPK;
+import org.springframework.data.repository.query.Param;
 
 public interface PersonaRepository extends CrudRepository<Persona, PersonaPK> {
 	
-	@Query(value = "select p from Persona p")
+	@Query(value = "SELECT p FROM Persona p")
 	List<Persona> findAll();
+
+	@Query(value = "SELECT p FROM Persona p WHERE p.indel = :indel")
+	List<Persona> findAllActive(@Param("indel") String indel);
 
 }

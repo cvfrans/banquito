@@ -16,32 +16,39 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 @Configuration
 public class DataSourceConfiguration {
 
-    @Value("${app.db.inmemory:true}")
+    @Value("${app.db.inmemory:false}")
     private boolean useInMemoryDb;
     
     /**
      * DataSource bean.
      * 
-     * @return {@link DataSourceFactoryBean}
+     * @return {@link DataSourceConfiguration}
      */
     @Bean
     public DataSource  dataSource(){
 
     	if (useInMemoryDb) {
-			return dataSourceH2();
+			return dataSourceH2();// H2
 		}else{
-			return dataSourcePG();
+			return dataSourcePG();// POSTGRES
 		}
     }
+
+	/**
+	 * postgres
+	 */
 	private DriverManagerDataSource dataSourcePG(){
     	DriverManagerDataSource dmd = new DriverManagerDataSource();
-    	dmd.setDriverClassName("org.h2.Driver");
-    	dmd.setUrl("jdbc:h2:mem:bank;");
-    	dmd.setUsername("sa");
-    	dmd.setPassword("");
+    	dmd.setDriverClassName("org.postgresql.Driver");
+    	dmd.setUrl("jdbc:postgresql://localhost:5432/banquito");
+    	dmd.setUsername("postgres");
+    	dmd.setPassword("123456789");
     	
     	return dmd;
 	}
+	/**
+	 * H2
+	 */
 	private DriverManagerDataSource dataSourceH2(){
     	DriverManagerDataSource dmd = new DriverManagerDataSource();
     	dmd.setDriverClassName("org.h2.Driver");

@@ -11,9 +11,10 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @Import(value = {
-		PropertiesConfiguration.class,
-        ServicesConfiguration.class,
-        RepositoryConfiguration.class,
+		PropertiesConfiguration.class
+        ,ServicesConfiguration.class
+        ,RepositoryConfiguration.class
+        ,DaoConfiguration.class
 })
 public class RootConfiguration {
 
