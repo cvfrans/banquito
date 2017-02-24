@@ -1,13 +1,12 @@
 package com.bank.credit.service.impl;
 
 import com.bank.credit.mapper.PersonaMapper;
-import com.bank.credit.model.GeneralResponse;
 import com.bank.credit.model.bean.PersonaBean;
-import com.bank.credit.model.jpa.Persona;
 import com.bank.credit.dao.PersonaDao;
+import com.bank.credit.model.jpa.Persona;
 import com.bank.credit.repository.PersonaRepository;
+import com.bank.credit.repository.PersonaRepositoryPagination;
 import com.bank.credit.service.PersonaService;
-import com.bank.credit.util.Constantes;
 import com.bank.credit.util.Pagination;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -24,6 +23,9 @@ public class PersonaServiceImpl implements PersonaService {
     private PersonaRepository personaRepository;
 
     @Autowired
+    private PersonaRepositoryPagination personaRepositoryPagination;
+
+    @Autowired
     private PersonaDao personaDao;
 
     public long listadoPersonasPaginadoTotalCount(){
@@ -36,4 +38,13 @@ public class PersonaServiceImpl implements PersonaService {
         List<PersonaBean> data = PersonaMapper.convertJPAToBean(listData);
         return data;
     }
+
+    public List<PersonaBean>  paginacionDemo(){
+        Iterable<Persona> list = personaRepositoryPagination.findPersonsByIndicator("0");
+        System.out.println(list);
+
+        List<PersonaBean> aaa = new ArrayList<>();
+        return aaa;
+    }
+
 }

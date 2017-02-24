@@ -9,7 +9,6 @@ Ext.define('eCredit.view.persona.ViewPanelGridPersona',{
 
     initComponent: function() {
         this.columns = [
-
             {
                 xtype: 'rownumberer',
                 sortable: false
